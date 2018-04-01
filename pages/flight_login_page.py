@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
+from pages.base_page import BasePage
 
-class FlightLoginPage():
+class FlightLoginPage(BasePage):
     _username_textbox = (By.NAME, "userName")
     _password_textbox = (By.NAME, "password")
     _login_button = (By.NAME, "login")
@@ -9,7 +10,7 @@ class FlightLoginPage():
 
     def __init__(self, driver):
         self.driver = driver
-        self._goto('http://newtours.demoaut.com/')
+        self._goto('/')
 
     def login_with(self, usr, pwd):
         self._input(self._username_textbox, usr)
