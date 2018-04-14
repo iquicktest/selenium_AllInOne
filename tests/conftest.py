@@ -69,3 +69,9 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     result = outcome.get_result()
     setattr(item, "result_" + result.when, result)
+
+
+
+
+
+
